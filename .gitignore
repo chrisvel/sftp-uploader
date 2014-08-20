@@ -1,0 +1,10 @@
+config.py
+requirements.txt
+installer.cfg
+.idea
+.idea/*
+*.pyc
+logs
+logs/*
+build
+build/*
