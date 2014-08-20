@@ -8,7 +8,7 @@ from logalert import logalert
 logalert = logalert.LogAlert()
 
 class SftpFilesUploader(object):
-    ''' Uploads files from locally to the Remote Sftp location '''
+    """ Uploads files from locally to the Remote Sftp location """
     sftpURL = config.sftpURL
     localDIR = config.localDIR
     localBackupDIR = config.localBackupDIR
@@ -26,7 +26,7 @@ class SftpFilesUploader(object):
         self.filesToUpload = []
 
     def connecttosftp(self, username, password):
-        ''' Opens a connection to sftp site '''
+        """ Opens a connection to sftp site """
         try:
             self.ssh = paramiko.SSHClient()
             self.ssh.set_missing_host_key_policy(paramiko.AutoAddPolicy())
@@ -38,7 +38,7 @@ class SftpFilesUploader(object):
             logalert.lognalertaction(e,'warn')
 
     def getremotesftpfilesstatus(self):
-        ''' Gets remote Sftp site files' status '''
+        """ Gets remote Sftp site files' status """
         try:
             logalert.lognalertaction("Checking for files in remote Sftp folder.",'info')
             logalert.lognalertaction( str(self.sftp.listdir(self.remoteDIR)),'info')
@@ -51,7 +51,7 @@ class SftpFilesUploader(object):
             logalert.lognalertaction(e,'warn')
 
     def getlocalfilesstatus(self):
-        ''' Gets local files '''
+        """ Gets local files """
         try:
             # check for files in local folder
             logalert.lognalertaction("Checking for files in local directory",'info')
@@ -66,7 +66,7 @@ class SftpFilesUploader(object):
             logalert.lognalertaction("EOFError",'warn')
 
     def uploadfiles(self):
-        ''' Uploads files to the Remote sftp site'''
+        """ Uploads files to the Remote sftp site"""
         if len(self.filesToUpload) > 0 :
             logalert.lognalertaction("Uploading files to remote Sftp site",'info')
             for file in self.filesToUpload:

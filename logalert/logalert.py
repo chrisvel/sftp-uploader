@@ -7,7 +7,7 @@ rootalert = tkinter.Tk()
 rootalert.withdraw()
 
 class LogAlert(object):
-    ''' Uploads files from Locally to the Remote site '''
+    """ Uploads files from Locally to the Remote site """
 
     def __init__(self):
         # create logger
@@ -20,7 +20,7 @@ class LogAlert(object):
         self.formatter = str('%(asctime)s - %(levelname)s - %(message)s')
 
     def lognalertaction(self, text, status):
-        ''' logs all shit '''
+        """ logs all shit """
         # create formatter
         formatter = logging.Formatter(self.formatter, datefmt='%m/%d/%Y %H:%M:%S')
 
