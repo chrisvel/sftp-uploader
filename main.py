@@ -17,10 +17,10 @@ try:
     username = input("Enter your username: ")
     password = getpass.getpass("Enter your password: ")
     while start_time < end_time:
-        sftpUp = sftpupload.WarehouseOrdersUploader()
+        sftpUp = sftpupload.SftpFilesUploader()
         print ("-"*70)
         sftpUp.connecttosftp(username,password)
-        sftpUp.getwarehousefilesstatus()
+        sftpUp.getremotesftpfilesstatus()
         sftpUp.getlocalfilesstatus()
         sftpUp.uploadfiles()
         print("Operation completed successfully.")
