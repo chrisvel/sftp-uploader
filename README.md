@@ -23,7 +23,7 @@ The software has been setup to upload Sftp files on a remote location and make a
 
     python main.py
 
-#TODO Write a complete description of all actions taken after script execution.
+*TODO: Write a complete description of all actions taken after script execution.
 
 License
 -------
