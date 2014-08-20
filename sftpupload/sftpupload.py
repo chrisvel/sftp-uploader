@@ -55,7 +55,7 @@ class SftpFilesUploader(object):
         try:
             # check for files in local folder
             logalert.lognalertaction("Checking for files in local directory",'info')
-            logalert.lognalertaction(str(self.sftp.listdir(self.remoteDIR)),'info')
+            logalert.lognalertaction(str(glob.glob1(self.localDIR, "OR*.txt")),'info')
             for localFile in glob.glob1(self.localDIR, "OR*.txt"):
                 self.filesToUpload.append(localFile)
                 # print the amount of files that wait to be uploaded
