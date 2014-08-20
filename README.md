@@ -19,6 +19,8 @@ Installation of an appropriate pycrypto version is needed prior to running the s
 Usage
 -----
 
+Rename config-default.py to config.py and set it up with real life data.
+
 The software has been setup to upload Sftp files on a remote location and make all the necessary security checks to complete.
 
     python main.py
