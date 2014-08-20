@@ -7,7 +7,7 @@ rootalert = tkinter.Tk()
 rootalert.withdraw()
 
 class LogAlert(object):
-    ''' Uploads files from Locally to the Warehouse '''
+    ''' Uploads files from Locally to the Remote site '''
 
     def __init__(self):
         # create logger
