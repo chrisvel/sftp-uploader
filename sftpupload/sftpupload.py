@@ -9,18 +9,18 @@ logalert = logalert.LogAlert()
 
 class SftpFilesUploader(object):
     """ Uploads files from locally to the Remote Sftp location """
-    sftpURL = config.sftpURL
-    localDIR = config.localDIR
-    localBackupDIR = config.localBackupDIR
-    remoteDIR = config.remoteDIR
-    timeOut = config.timeOut
+    sftpURL = config.SFTP_URL
+    localDIR = config.LOCAL_DIR
+    localBackupDIR = config.LOCAL_BACKUP_DIR
+    remoteDIR = config.REMOTE_DIR
+    timeOut = config.TIMEOUT
 
     def __init__(self):
-        self.sftpURL = config.sftpURL
-        self.localDIR = config.localDIR
-        self.localBackupDIR = config.localBackupDIR
-        self.remoteDIR = config.remoteDIR
-        self.timeOut = config.timeOut
+        self.sftpURL = config.SFTP_URL
+        self.localDIR = config.LOCAL_DIR
+        self.localBackupDIR = config.LOCAL_BACKUP_DIR
+        self.remoteDIR = config.REMOTE_DIR
+        self.timeOut = config.TIMEOUT
         self.ssh = None
         self.sftp = None
         self.filesToUpload = []
