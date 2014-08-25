@@ -1,11 +1,11 @@
 # setup some variables
-sftpURL = '10.10.10.10'
-localDIR = '//serverpath/folderwithfiles/'
-localBackupDIR = '//serverpath/folderwithfiles'
-remoteDIR = '/sftpfolder/'
-timeOut = 5
-startHour = 14
-startMinute = 6
-endHour = 21
-endMinute = 0
-interval = 60
+SFTP_URL = '10.10.10.10'
+LOCAL_DIR = '//serverpath/folderwithfiles/'
+LOCAL_BACKUP_DIR = '//serverpath/folderwithfiles'
+REMOTE_DIR = '/sftpfolder/'
+TIMEOUT = 5
+START_HOUR = 14
+START_MIN = 6
+END_HOUR = 21
+END_MIN = 0
+INTERVAL = 60
